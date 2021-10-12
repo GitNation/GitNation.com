@@ -1,0 +1,11 @@
+<div class="section coc">
+  <div class="container">
+    <div class="coc__description graphcms-container" {{ mixins.cmsData(conference) }}>
+      {{ conference.codeOfConductIntro | safe }}
+
+    </div>
+    <div class="coc__content graphcms-container" {{ mixins.cmsData(conference) }}>
+      {{ conference.codeOfConductMain | safe }}
+    </div>
+  </div>
+</div>
