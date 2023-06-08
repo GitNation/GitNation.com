@@ -13,25 +13,37 @@
 	a
 		text-decoration: none
 
-	.container
+	& > .container
 		width: 100%
 		min-height: 100%
 		display: flex
-
+		flex-direction: column
+		padding-top: 130px
+		padding-bottom: 60px
+		min-height: 60vh
 		+med
-			padding-top: 90px
+			min-height: 45vh
+		+sm
+			min-height: auto
 
 	&__head
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 5
 		display: flex
 		flex-wrap: wrap
+		width: 100%
+		padding: 40px 0
 		justify-content: space-between
 
-		+med
+		+lg
 			position: fixed
 			left: 0
 			top: 0
 			right: 0
-			padding: 10px 20px 10px
+			padding: 10px 0 10px
 			z-index: 10
 			background: var(--clr-white)
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.25)
@@ -52,14 +64,18 @@
 						padding: 100px 40px 50px
 						z-index: 11
 
+
 				.h-menu
 					display: flex
-
-
+		.container
+			display: flex
+			align-items: center
+			width: 100%
+			padding-top: 0
+			padding-bottom: 0
+			justify-content: space-between
 	&__burger
-		position: absolute
-		right: 16px
-		top: 10px
+
 		width: 40px
 		height: 40px
 		align-items: center
@@ -83,8 +99,7 @@
 				&:nth-child(4)
 					opacity: 1
 
-
-		+med
+		+lg
 			display: flex
 
 		span
@@ -108,20 +123,19 @@
 				opacity: 0
 				background: transparent
 
-
-
 	&__logo
 		+medium
 		margin: 0
 		font-size: 28px
 
-		+med
+		+lg
 			position: relative
 			top: 2px
 			a
 				color: var(--clr-theme)
 
 		a
+			display: block
 			text-decoration: none
 			color: var(--clr-white)
 
@@ -131,17 +145,9 @@
 	&__content
 		margin: auto 0
 		width: 100%
-
-
-	&__title
-		+bold
-		position: relative
-		font-size: 72px
-		text-transform: uppercase
+	&__inner
 		padding: 0 0 0 190px
-		margin: 182px 0
-		line-height: 1.14
-
+		position: relative
 		&:before
 			content: ''
 			position: absolute
@@ -152,8 +158,6 @@
 			background: var(--clr-white)
 
 		+lg
-			margin: 17vw 0
-			font-size: 7vw
 			padding: 0 0 0 18.5vw
 
 			&:before
@@ -163,16 +167,26 @@
 				height: 0.6vw
 
 		+sm
-			font-size: 12vw
 			padding: 0 0 0 0
 			margin: 0
 
 			&:before
 				display: none
 
+	&__title
+		+bold
+		font-size: 72px
+		text-transform: uppercase
+		line-height: 1.14
+		margin: 0
 
+		+lg
+			font-size: 7vw
 
-
+		+sm
+			font-size: 12vw
+	&__button
+		margin-top: 30px
 	.socials
 		position: absolute
 		right: 15px
@@ -180,7 +194,7 @@
 		transform: translateY(-50%)
 		flex-direction: column
 
-		+med
+		+lg
 			position: relative
 			right: auto
 			top: auto
@@ -203,7 +217,6 @@
 
 				&:first-child
 					margin: 0 5px 0 0
-
 
 		&__img
 			width: 17px
@@ -230,7 +243,6 @@
 				width: 24px
 				height: 24px
 
-
 .menu-btn
 	display: none
 	position: absolute
@@ -250,7 +262,6 @@
 	&.closed
 		display: block
 
-
 .smiles
 	position: absolute
 	left: 0
@@ -258,7 +269,7 @@
 	right: 0
 	bottom: 0
 	// background: #fe5619
-	
+
 	&__row
 		position: relative
 		display: flex
@@ -266,12 +277,9 @@
 
 		&:nth-child(odd)
 			left: -4.17vw
-		
 
 		&.rnd
 			background: #f00
-		
-	
 
 	&__img
 		width: 8.34vw
@@ -284,24 +292,17 @@
 
 		&.hidden
 			opacity: 0
-		
-	
 
-	.smiles__img 
+	.smiles__img
 		display: block
-	
 
-	@media only screen and (max-width : 640px) 
-	
+	@media only screen and (max-width : 640px)
+
 		&__row
 
 			&:nth-child(odd)
 				left: -8vw
-			
-		
 
 		&__img
 			width: 16vw
 			height: calc(16vw * 1.11)
-		
-	
