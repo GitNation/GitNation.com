@@ -1,32 +1,41 @@
 <section class="hero {% if pages[pageKey].pageSections.hero.hullHeight %}full-height{% endif %}" id="hero">
-	{% if pages[pageKey].pageSections.hero.smiles %}
-	<svg class="smiles__img" role="img" aria-hidden="true">
-		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/smiles.svg#smile_1"></use>
-	</svg>
-	<div class="smiles"></div>
-	{% endif %}
+   {% if pages[pageKey].pageSections.hero.smiles %}
+   <svg class="smiles__img" role="img" aria-hidden="true">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/smiles.svg#smile_1"></use>
+   </svg>
+   <div class="smiles"></div>
+   {% endif %}
+   <div class="hero__head js-header">
+      <div class="container">
+         <h1 class="hero__logo" alt="GitNation">
+            <a href="/">GitNation</a>
+         </h1>
 
-	<div class="container">
-		<div class="hero__content">
+         <nav class="hero__nav">
+            {% include "partials/_h-menu.html" %}
+         </nav>
 
-			<div class="hero__head js-header">
-				<h1 class="hero__logo" alt="GitNation">
-					<a href="/">GitNation</a>
-				</h1>
+         <div class="hero__burger js-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- <span></span> -->
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="hero__content">
 
-				<nav class="hero__nav">
-					{% include "partials/_h-menu.html" %}
-				</nav>
 
-				<div class="hero__burger js-burger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<!-- <span></span> -->
-				</div>
-			</div>
+         <div class="hero__inner">
+            <h2 class="hero__title">{{ pages[pageKey].pageSlogan | safe }}</h2>
+            {% if pages[pageKey] === pages.main %}
+            <div class="hero__button">
+               <a href="{{pagesPieceOfTexts.knowledge__link}}" class="btn btn--white btn--md">{{pagesPieceOfTexts.knowledge__linkText}}</a>
+            </div>
+            {% endif %}
+         </div>
 
-			<h2 class="hero__title">{{ pages[pageKey].pageSlogan | safe }}</h2>
-		</div>
-	</div>
+      </div>
+   </div>
 </section>

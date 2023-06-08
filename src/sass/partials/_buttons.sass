@@ -31,6 +31,7 @@
 	overflow: hidden
 	outline: none
 	border: 2px solid transparent
+	box-shadow: none
 	cursor: pointer
 	flex-shrink: 0
 	transition: all ease 0.1s
@@ -43,11 +44,20 @@
 		font-size: 12px
 		min-height: 38px
 
+	&--md
+		min-height: 48px
 
 	&--white
 		background: var(--clr-white)
-		color: var(--clr-black)
+		color: var(--clr-theme)
 		box-shadow: 0 0 0 var(--clr-black)
+		padding: 0 30px
+		font-weight: 600
+		text-transform: uppercase
+		&:hover
+			background: var(--clr-theme)
+			border-color: var(--clr-white)
+			color: var(--clr-white)
 
 	&--transparent
 		color: var(--clr-text)
@@ -77,5 +87,4 @@
 			color: var(--clr-text)
 			box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3)
 
-			
-			
+

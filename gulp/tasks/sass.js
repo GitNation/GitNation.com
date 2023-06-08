@@ -9,7 +9,7 @@ const csso = require('postcss-csso');
 
 const processors = [
   autoprefixer({
-    browsers: ['last 4 versions'],
+    overrideBrowserslist: ['last 4 versions'],
     cascade: false,
     grid: true,
   }),
@@ -20,7 +20,7 @@ const processors = [
   // csso
 ];
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   return gulp
     .src(config.src.sass + '/*.{sass,scss}')
     .pipe(sourcemaps.init())
@@ -36,7 +36,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(config.dest.css));
 });
 
-gulp.task('sass:watch', function() {
+gulp.task('sass:watch', function () {
   gulp.watch(config.src.sass + '/**/*.{sass,scss}', ['sass']);
 });
 
