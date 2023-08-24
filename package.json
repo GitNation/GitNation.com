@@ -101,5 +101,8 @@
   "dependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/node": "^7.10.5"
+  },
+  "volta": {
+    "node": "10.24.1"
   }
 }
