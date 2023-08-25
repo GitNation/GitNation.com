@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/diversity"
+  to = "/diversity-and-inclusion"
+  status = 301
+
+[[redirects]]
+  from = "/data-promise"
+  to = "https://docs.google.com/document/d/e/2PACX-1vQrrL7d5P7JSld8LxKd5NX1ErXpdpLwXEw1rg4QlkyHGyjW2jGPUKmYOXrM04I_hRMdWLKVvGjDMwzA/pub"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "https://docs.google.com/document/d/e/2PACX-1vRS6IOeWsniYUTakia36xYAluau_KkmnFO8FlSinIqGN52izR8mG1cC8jWjd9S5LdrKOCYrkJpnaFTp/pub"
+  status = 200
